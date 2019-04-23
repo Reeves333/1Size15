@@ -6,16 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/Tabs"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_gravity="start"
-        app:menu="@menu/my_navigation_items">
-
-
-    </android.support.design.widget.BottomNavigationView>
-
     <Button
         android:id="@+id/eProfile"
         style="@style/Widget.AppCompat.Button"

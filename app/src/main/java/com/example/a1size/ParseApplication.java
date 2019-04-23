@@ -11,7 +11,7 @@ public class ParseApplication extends Application {
 
         ParseObject.registerSubclass(Post.class);
 
-        // set applicationId, and server server based on the values in the Heroku settings.
+        // set applicationId, and server server based on the values in the Heroku fragment_settings.
         // clientKey is not needed unless explicitly configured
         // any network interceptors must be added with the Configuration Builder given this syntax
         Parse.initialize(new Parse.Configuration.Builder(this)

@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.a1size.fragment.CreationFragment;
 import com.example.a1size.fragment.PostFragment;
+import com.example.a1size.fragment.SettingsFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,9 +35,9 @@ public class MainActivity extends AppCompatActivity {
                         fragment = new PostFragment();
                         Toast.makeText(MainActivity.this, "Home!", Toast.LENGTH_SHORT).show();
                         break;
-                    case R.id.Search:
+                    case R.id.Profile:
                         fragment = new CreationFragment();
-                        Toast.makeText(MainActivity.this, "Search!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Profile!", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.creation:
                         fragment = new CreationFragment();
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.settings:
                     default:
-                        fragment = new CreationFragment();
+                        fragment = new SettingsFragment();
                         Toast.makeText(MainActivity.this, "Settings!", Toast.LENGTH_SHORT).show();
                         break;
                 }
