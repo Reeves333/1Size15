@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.a1size.fragment.CreationFragment;
+import com.example.a1size.fragment.PostFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,18 +31,21 @@ public class MainActivity extends AppCompatActivity {
                 Fragment fragment;
                 switch (item.getItemId()) {
                     case R.id.Home:
-                        fragment = new Fragment();
+                        fragment = new PostFragment();
                         Toast.makeText(MainActivity.this, "Home!", Toast.LENGTH_SHORT).show();
                         break;
-                    case R.id.settings:
-                        fragment = new Fragment();
-                        Toast.makeText(MainActivity.this, "Settings!", Toast.LENGTH_SHORT).show();
+                    case R.id.Search:
+                        fragment = new CreationFragment();
+                        Toast.makeText(MainActivity.this, "Search!", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.creation:
-                    default:
-
                         fragment = new CreationFragment();
                         Toast.makeText(MainActivity.this, "Creation!", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.settings:
+                    default:
+                        fragment = new CreationFragment();
+                        Toast.makeText(MainActivity.this, "Settings!", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();
