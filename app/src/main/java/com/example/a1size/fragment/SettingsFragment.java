@@ -17,6 +17,7 @@ import com.example.a1size.Settings.PreferenceActivity;
 import com.example.a1size.Settings.PrivacyPolicyActivity;
 import com.example.a1size.Settings.SocialMediaActivity;
 import com.example.a1size.Settings.TermServicesActivity;
+import com.parse.ParseUser;
 
 public class SettingsFragment extends Fragment {
     private final String TAG = "SettingsFragment";
@@ -72,6 +73,13 @@ public class SettingsFragment extends Fragment {
             }
         });
         logOut =  view.findViewById(R.id.logOut);
+        logOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ParseUser.logOut();
+                //ParseUser currentUser = ParseUser.getCurrentUser(); // this will now be null
+            }
+        });
 
 
     }

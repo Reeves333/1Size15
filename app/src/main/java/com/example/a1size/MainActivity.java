@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.a1size.fragment.CreationFragment;
-import com.example.a1size.fragment.PostFragment;
+import com.example.a1size.fragment.PostsFragment;
 import com.example.a1size.fragment.SettingsFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 Fragment fragment;
                 switch (item.getItemId()) {
                     case R.id.Home:
-                        fragment = new PostFragment();
+                        fragment = new PostsFragment();
                         Toast.makeText(MainActivity.this, "Home!", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.Profile:
